@@ -1,0 +1,55 @@
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+.errorText {
+  font-size: 260px;
+  font-weight: 700;
+  color: #ff6060;
+}
+
+.errorTextMedium {
+  font-size: 30px;
+  color: #ff6060;
+  margin-bottom: 80px;
+}
+
+.errorTextSmall {
+  font-size: 18px;
+  color: #ff6060;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.errorTextSmall:hover,
+.errorTextSmall:active {
+  color: #ff6060;
+}
+
+@media screen and (max-width: 850px) {
+  .errorContainer {
+    padding: 0px 30px 0px;
+  }
+
+  .errorText {
+    font-size: 110px;
+    margin-bottom: 20px;
+  }
+
+  .errorTextMedium {
+    font-size: 22px;
+    margin-bottom: 80px;
+    text-align: center;
+  }
+
+  .errorTextSmall {
+    font-size: 16px;
+  }
+}

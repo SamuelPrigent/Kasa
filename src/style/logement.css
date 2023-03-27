@@ -1,0 +1,271 @@
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0px 75px 0px;
+}
+
+.bannerContainerLogement {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  margin-bottom: 27px;
+  position: relative;
+}
+
+.bannerImgLogement {
+  aspect-ratio: 1240 / 415;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+.bannerText {
+  display: flex;
+  aspect-ratio: 1240 / 223;
+  justify-content: center;
+  align-items: center;
+  border-radius: 22px;
+  background-color: rgb(0 0 0 / 0.3);
+  color: white;
+  font-weight: 500;
+  font-size: 39px;
+  z-index: 2;
+  width: 100%;
+  position: absolute;
+}
+
+/* info header  */
+.logementContainer {
+  padding: 0px 75px 0px;
+  display: flex;
+  flex-direction: column;
+  border: 0px solid blue;
+  margin-bottom: 50px;
+}
+
+.logementInfoHeader {
+  display: flex;
+  justify-content: space-between;
+  border: 0px solid red;
+  margin-bottom: 40px;
+}
+
+.logementInfoHeaderLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.logementInfoHeaderRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.logementLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 0px solid blue;
+}
+
+.logementId {
+  display: flex;
+  gap: 20px;
+  height: 90px;
+  justify-content: flex-start;
+  border: 0px solid red;
+  height: 60px;
+}
+
+.logementTitleLocation {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #ff6060;
+  min-height: 60px;
+}
+
+.logementTitle {
+  font-size: 30px;
+}
+
+.logementLocation {
+  font-size: 18px;
+}
+
+.logementId {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #ff6060;
+  font-size: 16px;
+}
+
+.logementPrenomNom {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  gap: 5px;
+}
+
+.logementPrenom {
+  text-align: right;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.logementNom {
+  text-align: right;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.userImg {
+  height: 60px;
+}
+
+.logementTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.logementTag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff6060;
+  padding: 5px 30px;
+  font-size: 14px;
+  color: white;
+  border-radius: 5px;
+  max-height: 15px;
+}
+
+.logementRatings {
+  display: flex;
+  gap: 10px;
+}
+
+.logementRating {
+  height: 28px;
+}
+
+.logementBloc {
+  display: flex;
+  justify-content: space-between;
+  border: 0px solid black;
+}
+
+.logementBlocDisplay {
+  display: flex;
+  flex-direction: column;
+  border: 0px solid black;
+  width: 47%;
+}
+
+.barToggle {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  justify-content: space-between;
+  background-color: #ff6060;
+  height: 35px;
+  color: white;
+  padding: 6px 20px 6px 20px;
+  font-size: 18px;
+  font-weight: 500;
+  z-index: 1;
+}
+
+.arrowToggle {
+  height: 16px;
+  color: white;
+}
+
+.textToggleLogement {
+  background-color: #f6f6f6;
+  color: #ff6060;
+  border-radius: 0px 0px 5px 5px;
+  position: relative;
+  font-size: 18px;
+  line-height: 150%;
+  padding: 25px 19px 19px 19px;
+  bottom: 5px;
+  z-index: 0;
+  margin-bottom: 20px;
+}
+
+.textToggle2 {
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  color: #ff6060;
+  border-radius: 0px 0px 5px 5px;
+  position: relative;
+  font-size: 18px;
+  line-height: 150%;
+  padding: 25px 19px 19px 19px;
+  bottom: 5px;
+  z-index: 0;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 850px) {
+  .logementBloc {
+    flex-direction: column;
+  }
+
+  .logementBlocDisplay {
+    width: 100%;
+  }
+
+  .logementInfoHeader {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .logementInfoHeaderRight {
+    align-items: center;
+    margin-top: 20px;
+    flex-direction: row;
+  }
+
+  .logementId {
+    order: 1;
+  }
+
+  .logementRating {
+    height: 26px;
+  }
+
+  .bannerContainerLogement {
+    margin-bottom: 22px;
+  }
+
+  .bannerImgLogement {
+    aspect-ratio: 335 / 255;
+    border-radius: 10px;
+  }
+
+  .headerContainer {
+    padding: 0px 32px 0px;
+  }
+
+  .logementContainer {
+    padding: 0px 32px 0px;
+  }
+
+  .textToggleLogement {
+    font-size: 16px;
+  }
+
+  .textToggle2 {
+    font-size: 16px;
+  }
+}
