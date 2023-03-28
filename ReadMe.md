@@ -1,4 +1,4 @@
-# Front Projet
+## Front-End Projet
 
 ### Install & Start Project
 
