@@ -34,13 +34,20 @@
   position: absolute;
 }
 
+/*  */
+.infoContainerLogement {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
 /* info header  */
 .logementContainer {
   padding: 0px 75px 0px;
   display: flex;
   flex-direction: column;
   border: 0px solid blue;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .logementInfoHeader {
@@ -150,6 +157,7 @@
 .logementRatings {
   display: flex;
   gap: 10px;
+  user-select: none;
 }
 
 .logementRating {
@@ -175,7 +183,7 @@
   border-radius: 5px;
   justify-content: space-between;
   background-color: #ff6060;
-  height: 35px;
+  height: 29px;
   color: white;
   padding: 6px 20px 6px 20px;
   font-size: 18px;
@@ -189,6 +197,7 @@
 }
 
 .textToggleLogement {
+  display: none;
   background-color: #f6f6f6;
   color: #ff6060;
   border-radius: 0px 0px 5px 5px;
@@ -198,11 +207,10 @@
   padding: 25px 19px 19px 19px;
   bottom: 5px;
   z-index: 0;
-  margin-bottom: 20px;
 }
 
 .textToggle2 {
-  display: flex;
+  display: none;
   flex-direction: column;
   background-color: #f6f6f6;
   color: #ff6060;
@@ -213,8 +221,26 @@
   padding: 25px 19px 19px 19px;
   bottom: 5px;
   z-index: 0;
-  margin-bottom: 20px;
 }
+
+/* Css Toggle element */
+
+.toggleMenu {
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.textToggle {
+  display: none;
+}
+
+.visible {
+  display: flex;
+}
+
+/* Css Toggle element */
 
 @media screen and (max-width: 850px) {
   .logementBloc {
@@ -242,6 +268,7 @@
 
   .logementRating {
     height: 26px;
+    user-select: none;
   }
 
   .bannerContainerLogement {
@@ -267,5 +294,9 @@
 
   .textToggle2 {
     font-size: 16px;
+  }
+
+  .infoContainerLogement {
+    padding: 0px;
   }
 }

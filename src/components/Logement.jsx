@@ -1,5 +1,4 @@
 // assets
-import BannerLogement from "../assets/logementbanner.jpg";
 import User from "../assets/UserImg.png";
 import RatingRed from "../assets/RatingRed.svg";
 import RatingGrey from "../assets/RatingGrey.svg";
@@ -10,6 +9,7 @@ import "../style/reset.css";
 //
 import { useParams } from "react-router-dom"; // recup params
 import logement from "../data/logements.json"; // Fetch real data
+import { useState } from "react";
 
 // Tag element
 function TagElement({ tag }) {
@@ -106,8 +106,17 @@ function Info() {
   const equipements = kasa.equipments;
   const stuffElements = createEquiment(equipements);
 
-  // console.log
-  // console.log(logement.find((element) => element.id === id));
+  // Toggle Visibility
+  const [infoVisible, setInfoVisible] = useState({
+    desc: true,
+    stuff: true,
+  });
+  const handleToggle = (id) => {
+    setInfoVisible((prevState) => ({
+      ...prevState,
+      [id]: !prevState[id],
+    }));
+  };
 
   return (
     <div>
@@ -144,18 +153,40 @@ function Info() {
         </div>
         <div className="logementBloc">
           <div className="logementBlocDisplay">
-            <div className="barToggle">
-              <div>Description</div>
-              <img src={Arrow} className="arrowToggle" alt="logo" />
+            <div className="infoContainerLogement">
+              <div className="barToggle" onClick={() => handleToggle("desc")}>
+                <div>Description</div>
+                <img
+                  src={Arrow}
+                  className={`toggleMenu ${infoVisible.desc ? "rotate" : ""}`}
+                  alt="logo"
+                />
+              </div>
+              <div
+                className={`textToggleLogement ${
+                  infoVisible.desc ? "visible" : ""
+                }`}
+              >
+                {kasa.description}
+              </div>
             </div>
-            <div className="textToggleLogement">{kasa.description}</div>
           </div>
           <div className="logementBlocDisplay">
-            <div className="barToggle">
-              <div>Équipements</div>
-              <img src={Arrow} className="arrowToggle" alt="logo" />
+            <div className="infoContainerLogement">
+              <div className="barToggle" onClick={() => handleToggle("stuff")}>
+                <div>Équipements</div>
+                <img
+                  src={Arrow}
+                  className={`toggleMenu ${infoVisible.stuff ? "rotate" : ""}`}
+                  alt="logo"
+                />
+              </div>
+              <ul
+                className={`textToggle2 ${infoVisible.stuff ? "visible" : ""}`}
+              >
+                {stuffElements}
+              </ul>
             </div>
-            <ul className="textToggle2">{stuffElements}</ul>
           </div>
         </div>
       </div>

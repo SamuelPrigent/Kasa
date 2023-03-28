@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   position: relative;
 }
 
@@ -56,10 +56,10 @@
   border-radius: 5px;
   justify-content: space-between;
   background-color: #ff6060;
-  height: 35px;
+  height: 29px;
   color: white;
   padding: 6px 30px 6px 20px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   z-index: 1;
   cursor: pointer;
@@ -87,6 +87,25 @@
   display: none;
 }
 
+/* Css Toggle element */
+
+.toggleMenu {
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.textToggle {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+/* Css Toggle element */
+
 @media screen and (max-width: 850px) {
   .bannerImgInfo {
     aspect-ratio: 335 / 255;
@@ -104,10 +123,6 @@
 
   .infoContainer {
     padding: 0px 32px 0px;
-  }
-
-  .bannerContainerInfo {
-    margin-bottom: 15px;
   }
 
   .headerContainer {
