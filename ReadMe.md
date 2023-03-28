@@ -1,6 +1,6 @@
 ## FRONT END PROJECT
 
-## Install & Start Project
+# Install & Start Project
 
 - Npm install
 - Npm run dev
