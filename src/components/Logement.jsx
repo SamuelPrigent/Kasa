@@ -3,6 +3,7 @@ import User from "../assets/UserImg.png";
 import RatingRed from "../assets/RatingRed.svg";
 import RatingGrey from "../assets/RatingGrey.svg";
 import Arrow from "../assets/Arrow.svg";
+
 // css
 import "../style/logement.css";
 import "../style/reset.css";
@@ -95,6 +96,18 @@ function Ratings() {
   }
 }
 
+// Scroll kasa.pictures[0] - [X]
+function slidePicture(pictures, imgNumber) {
+  // dom
+  const bannerImage = document.querySelector(".bannerImgLogement");
+  console.log("click");
+  // console.log
+  // console.log(bannerImage);
+  // console.log(pictures);
+  // console.log(pictures[imgNumber]);
+}
+//
+
 // Info Page
 function Info() {
   const { id } = useParams(); // get id
@@ -117,15 +130,23 @@ function Info() {
     }));
   };
 
+  // banner pictures
+  const picsArray = kasa.pictures;
+  const pic = 0;
+  const length = picsArray.length;
+
   return (
     <div>
       <div className="headerContainerLogement">
         <div className="bannerContainerLogement">
-          <img
-            src={kasa.pictures[0]}
-            className="bannerImgLogement"
-            alt="logo"
-          />
+          <img src={picsArray[pic]} className="bannerImgLogement" alt="logo" />
+          <div onClick={slidePicture} className="arrowBannerLeftContainer">
+            <img src={Arrow} className="arrowBannerLeft" alt="logo" />
+          </div>
+          <div className="arrowBannerRightContainer">
+            <img src={Arrow} className="arrowBannerRight" alt="logo" />
+          </div>
+          <div className="numberBanner">1/{length}</div>
         </div>
       </div>
       <div className="logementContainer">

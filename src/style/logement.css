@@ -5,12 +5,66 @@
   padding: 0px 75px 0px;
 }
 
+/* Banner  */
+
 .bannerContainerLogement {
   display: flex;
   flex-direction: column;
   margin-top: 30px;
   margin-bottom: 27px;
   position: relative;
+}
+
+/* Banner Nav */
+
+.arrowBannerLeftContainer {
+  position: absolute;
+  left: 8px;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  /* border: 2px solid black; */
+}
+
+.arrowBannerRightContainer {
+  position: absolute;
+  justify-content: center;
+  right: 8px;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  /* border: 2px solid black; */
+}
+
+.arrowBannerLeft {
+  rotate: -90deg;
+  height: 34px;
+}
+
+.arrowBannerRight {
+  rotate: 90deg;
+  height: 34px;
+}
+
+.numberBanner {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 18px;
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  /* border: 2px solid black; */
 }
 
 .bannerImgLogement {
@@ -269,10 +323,6 @@
   .logementRating {
     height: 26px;
     user-select: none;
-  }
-
-  .bannerContainerLogement {
-    margin-bottom: 22px;
   }
 
   .bannerImgLogement {
