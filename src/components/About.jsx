@@ -96,7 +96,7 @@ function ToggleElement() {
 function Info() {
   return (
     <div>
-      <div className="headerContainer">
+      <div className="headerContainerAbout">
         <div className="bannerContainerInfo">
           <img src={BannerImg2} className="bannerImgInfo" alt="logo" />
           <div className="bannerTextInfo"></div>

@@ -37,7 +37,6 @@ function Ratings() {
   const { id } = useParams(); // get id
   const kasa = logement.find((element) => element.id === id);
   const rating = kasa.rating;
-  // console.log(rating);
 
   if (rating == 1) {
     return (
@@ -120,7 +119,7 @@ function Info() {
 
   return (
     <div>
-      <div className="headerContainer">
+      <div className="headerContainerLogement">
         <div className="bannerContainerLogement">
           <img
             src={kasa.pictures[0]}

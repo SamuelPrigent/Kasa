@@ -51,7 +51,7 @@
 
 @media screen and (max-width: 850px) {
   .headerContainer {
-    padding: 0px 32px 0px;
+    padding: 0px 20px 0px;
   }
 
   .header-navigation-link {
@@ -64,5 +64,9 @@
 
   .header-navigation {
     gap: 0px;
+  }
+
+  .header-logo {
+    height: 30px;
   }
 }

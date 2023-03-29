@@ -1,4 +1,4 @@
-.headerContainer {
+.headerContainerLogement {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -183,7 +183,7 @@
   border-radius: 5px;
   justify-content: space-between;
   background-color: #ff6060;
-  height: 29px;
+  height: 30px;
   color: white;
   padding: 6px 20px 6px 20px;
   font-size: 18px;
@@ -280,12 +280,12 @@
     border-radius: 10px;
   }
 
-  .headerContainer {
-    padding: 0px 32px 0px;
+  .headerContainerLogement {
+    padding: 0px 22px 0px;
   }
 
   .logementContainer {
-    padding: 0px 32px 0px;
+    padding: 0px 22px 0px;
   }
 
   .textToggleLogement {

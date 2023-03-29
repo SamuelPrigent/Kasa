@@ -1,4 +1,4 @@
-.headerContainer {
+.headerContainerAbout {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -56,9 +56,9 @@
   border-radius: 5px;
   justify-content: space-between;
   background-color: #ff6060;
-  height: 29px;
+  height: 30px;
   color: white;
-  padding: 6px 30px 6px 20px;
+  padding: 6px 20px 6px 20px;
   font-size: 18px;
   font-weight: 500;
   z-index: 1;
@@ -90,6 +90,7 @@
 /* Css Toggle element */
 
 .toggleMenu {
+  rotate: 180deg;
 }
 
 .rotate {
@@ -122,14 +123,19 @@
   }
 
   .infoContainer {
-    padding: 0px 32px 0px;
+    padding: 0px 22px 0px;
   }
 
-  .headerContainer {
-    padding: 0px 32px 0px;
+  .headerContainerAbout {
+    padding: 0px 22px 0px;
   }
 
   .textToggle {
     font-size: 18px;
+  }
+
+  .bannerContainerInfo {
+    margin-top: 25px;
+    margin-bottom: 0px;
   }
 }
