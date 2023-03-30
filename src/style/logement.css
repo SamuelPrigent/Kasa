@@ -44,16 +44,19 @@
 }
 
 .arrowBannerLeft {
+  user-select: none;
   rotate: -90deg;
   height: 34px;
 }
 
 .arrowBannerRight {
+  user-select: none;
   rotate: 90deg;
   height: 34px;
 }
 
 .numberBanner {
+  user-select: none;
   position: absolute;
   box-sizing: border-box;
   padding: 18px;
@@ -71,6 +74,7 @@
   aspect-ratio: 1240 / 415;
   object-fit: cover;
   border-radius: 22px;
+  user-select: none;
 }
 
 .bannerText {
@@ -348,5 +352,10 @@
 
   .infoContainerLogement {
     padding: 0px;
+  }
+
+  .arrowBannerRight,
+  .arrowBannerLeft {
+    height: 27px;
   }
 }

@@ -96,17 +96,47 @@ function Ratings() {
   }
 }
 
-// Scroll kasa.pictures[0] - [X]
-function slidePicture(pictures, imgNumber) {
-  // dom
-  const bannerImage = document.querySelector(".bannerImgLogement");
-  console.log("click");
-  // console.log
-  // console.log(bannerImage);
-  // console.log(pictures);
-  // console.log(pictures[imgNumber]);
+function ImageSlider({ array }) {
+  const [currentImage, setCurrentImage] = useState(array[0]);
+  const [currentNumber, setCurrentNumber] = useState(1);
+
+  function handleNextImage() {
+    const currentIndex = array.indexOf(currentImage);
+    let nextIndex = currentIndex + 1;
+    if (nextIndex === array.length) {
+      nextIndex = 0;
+    }
+    setCurrentImage(array[nextIndex]);
+    setCurrentNumber(nextIndex + 1);
+  }
+
+  function handlePrevImage() {
+    const currentIndex = array.indexOf(currentImage);
+    let nextIndex = currentIndex - 1;
+    if (nextIndex === -1) {
+      nextIndex = array.length - 1;
+    }
+    setCurrentImage(array[nextIndex]);
+    setCurrentNumber(nextIndex + 1);
+  }
+
+  return (
+    <div className="headerContainerLogement">
+      <div className="bannerContainerLogement">
+        <img src={currentImage} className="bannerImgLogement" alt="logo" />
+        <div onClick={handlePrevImage} className="arrowBannerLeftContainer">
+          <img src={Arrow} className="arrowBannerLeft" alt="logo" />
+        </div>
+        <div onClick={handleNextImage} className="arrowBannerRightContainer">
+          <img src={Arrow} className="arrowBannerRight" alt="logo" />
+        </div>
+        <div className="numberBanner">
+          {currentNumber}/{array.length}
+        </div>
+      </div>
+    </div>
+  );
 }
-//
 
 // Info Page
 function Info() {
@@ -117,6 +147,7 @@ function Info() {
   const tagElements = createTags(tags);
   const equipements = kasa.equipments;
   const stuffElements = createEquiment(equipements);
+  const picsArray = kasa.pictures;
 
   // Toggle Visibility
   const [infoVisible, setInfoVisible] = useState({
@@ -130,25 +161,9 @@ function Info() {
     }));
   };
 
-  // banner pictures
-  const picsArray = kasa.pictures;
-  const pic = 0;
-  const length = picsArray.length;
-
   return (
     <div>
-      <div className="headerContainerLogement">
-        <div className="bannerContainerLogement">
-          <img src={picsArray[pic]} className="bannerImgLogement" alt="logo" />
-          <div onClick={slidePicture} className="arrowBannerLeftContainer">
-            <img src={Arrow} className="arrowBannerLeft" alt="logo" />
-          </div>
-          <div className="arrowBannerRightContainer">
-            <img src={Arrow} className="arrowBannerRight" alt="logo" />
-          </div>
-          <div className="numberBanner">1/{length}</div>
-        </div>
-      </div>
+      <ImageSlider array={picsArray} />
       <div className="logementContainer">
         <div className="logementInfoHeader">
           <div className="logementInfoHeaderLeft">
