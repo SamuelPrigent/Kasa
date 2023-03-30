@@ -11,6 +11,7 @@ import "../style/reset.css";
 import { useParams } from "react-router-dom"; // recup params
 import logement from "../data/logements.json"; // Fetch real data
 import { useState } from "react";
+import { useEffect } from "react";
 
 // Tag element
 function TagElement({ tag }) {
@@ -100,6 +101,14 @@ function ImageSlider({ array }) {
   const [currentImage, setCurrentImage] = useState(array[0]);
   const [currentNumber, setCurrentNumber] = useState(1);
 
+  // visibilité or arrow and text
+  const [arrowVisible, setArrowVisible] = useState(true);
+  useEffect(() => {
+    if (array.length === 1) {
+      setArrowVisible(false);
+    }
+  }, [array]);
+
   function handleNextImage() {
     const currentIndex = array.indexOf(currentImage);
     let nextIndex = currentIndex + 1;
@@ -125,12 +134,20 @@ function ImageSlider({ array }) {
       <div className="bannerContainerLogement">
         <img src={currentImage} className="bannerImgLogement" alt="logo" />
         <div onClick={handlePrevImage} className="arrowBannerLeftContainer">
-          <img src={Arrow} className="arrowBannerLeft" alt="logo" />
+          <img
+            src={Arrow}
+            className={`arrowBannerLeft ${arrowVisible ? "" : "hide"}`}
+            alt="logo"
+          />
         </div>
         <div onClick={handleNextImage} className="arrowBannerRightContainer">
-          <img src={Arrow} className="arrowBannerRight" alt="logo" />
+          <img
+            src={Arrow}
+            className={`arrowBannerRight ${arrowVisible ? "" : "hide"}`}
+            alt="logo"
+          />
         </div>
-        <div className="numberBanner">
+        <div className={`numberBanner ${arrowVisible ? "" : "hide"}`}>
           {currentNumber}/{array.length}
         </div>
       </div>

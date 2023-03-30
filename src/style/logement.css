@@ -298,6 +298,12 @@
   display: flex;
 }
 
+/* Hide arrow and number */
+
+.hide {
+  display: none;
+}
+
 /* Css Toggle element */
 
 @media screen and (max-width: 850px) {
