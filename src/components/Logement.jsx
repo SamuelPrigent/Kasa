@@ -12,6 +12,7 @@ import { useParams } from "react-router-dom"; // recup params
 import logement from "../data/logements.json"; // Fetch real data
 import { useState } from "react";
 import { useEffect } from "react";
+import { useRef } from "react";
 
 // Tag element
 function TagElement({ tag }) {
@@ -128,6 +129,20 @@ function ImageSlider({ array }) {
     setCurrentImage(array[nextIndex]);
     setCurrentNumber(nextIndex + 1);
   }
+
+  // Nav via KeyDown
+  useEffect(() => {
+    function handleKeyDown(e) {
+      if (e.keyCode === 37) {
+        handlePrevImage();
+      }
+      if (e.keyCode === 39) {
+        handleNextImage();
+      }
+    }
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [currentImage]);
 
   return (
     <div className="headerContainerLogement">
