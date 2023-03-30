@@ -44,55 +44,55 @@ function Ratings() {
   if (rating == 1) {
     return (
       <div className="logementRatings">
-        <img src={RatingRed} className="logementRating" alt="logo" />
-        <img src={RatingGrey} className="logementRating" alt="logo" />
-        <img src={RatingGrey} className="logementRating" alt="logo" />
-        <img src={RatingGrey} className="logementRating" alt="logo" />
-        <img src={RatingGrey} className="logementRating" alt="logo" />
+        <img src={RatingRed} className="logementRating" alt="red star" />
+        <img src={RatingGrey} className="logementRating" alt="grey star" />
+        <img src={RatingGrey} className="logementRating" alt="grey star" />
+        <img src={RatingGrey} className="logementRating" alt="grey star" />
+        <img src={RatingGrey} className="logementRating" alt="grey star" />
       </div>
     );
   }
   if (rating == 2) {
     return (
       <div className="logementRatings">
-        <img src={RatingRed} className="logementRating" alt="logo" />
-        <img src={RatingRed} className="logementRating" alt="logo" />
-        <img src={RatingGrey} className="logementRating" alt="logo" />
-        <img src={RatingGrey} className="logementRating" alt="logo" />
-        <img src={RatingGrey} className="logementRating" alt="logo" />
+        <img src={RatingRed} className="logementRating" alt="red star" />
+        <img src={RatingRed} className="logementRating" alt="red star" />
+        <img src={RatingGrey} className="logementRating" alt="grey star" />
+        <img src={RatingGrey} className="logementRating" alt="grey star" />
+        <img src={RatingGrey} className="logementRating" alt="grey star" />
       </div>
     );
   }
   if (rating == 3) {
     return (
       <div className="logementRatings">
-        <img src={RatingRed} className="logementRating" alt="logo" />
-        <img src={RatingRed} className="logementRating" alt="logo" />
-        <img src={RatingRed} className="logementRating" alt="logo" />
-        <img src={RatingGrey} className="logementRating" alt="logo" />
-        <img src={RatingGrey} className="logementRating" alt="logo" />
+        <img src={RatingRed} className="logementRating" alt="red star" />
+        <img src={RatingRed} className="logementRating" alt="red star" />
+        <img src={RatingRed} className="logementRating" alt="red star" />
+        <img src={RatingGrey} className="logementRating" alt="grey star" />
+        <img src={RatingGrey} className="logementRating" alt="grey star" />
       </div>
     );
   }
   if (rating == 4) {
     return (
       <div className="logementRatings">
-        <img src={RatingRed} className="logementRating" alt="logo" />
-        <img src={RatingRed} className="logementRating" alt="logo" />
-        <img src={RatingRed} className="logementRating" alt="logo" />
-        <img src={RatingRed} className="logementRating" alt="logo" />
-        <img src={RatingGrey} className="logementRating" alt="logo" />
+        <img src={RatingRed} className="logementRating" alt="red star" />
+        <img src={RatingRed} className="logementRating" alt="red star" />
+        <img src={RatingRed} className="logementRating" alt="red star" />
+        <img src={RatingRed} className="logementRating" alt="red star" />
+        <img src={RatingGrey} className="logementRating" alt="grey star" />
       </div>
     );
   }
   if (rating == 5) {
     return (
       <div className="logementRatings">
-        <img src={RatingRed} className="logementRating" alt="logo" />
-        <img src={RatingRed} className="logementRating" alt="logo" />
-        <img src={RatingRed} className="logementRating" alt="logo" />
-        <img src={RatingRed} className="logementRating" alt="logo" />
-        <img src={RatingRed} className="logementRating" alt="logo" />
+        <img src={RatingRed} className="logementRating" alt="red star" />
+        <img src={RatingRed} className="logementRating" alt="red star" />
+        <img src={RatingRed} className="logementRating" alt="red star" />
+        <img src={RatingRed} className="logementRating" alt="red star" />
+        <img src={RatingRed} className="logementRating" alt="red star" />
       </div>
     );
   }
@@ -147,19 +147,23 @@ function ImageSlider({ array }) {
   return (
     <div className="headerContainerLogement">
       <div className="bannerContainerLogement">
-        <img src={currentImage} className="bannerImgLogement" alt="logo" />
+        <img
+          src={currentImage}
+          className="bannerImgLogement"
+          alt="photo logement"
+        />
         <div onClick={handlePrevImage} className="arrowBannerLeftContainer">
           <img
             src={Arrow}
             className={`arrowBannerLeft ${arrowVisible ? "" : "hide"}`}
-            alt="logo"
+            alt="fleche précédent"
           />
         </div>
         <div onClick={handleNextImage} className="arrowBannerRightContainer">
           <img
             src={Arrow}
             className={`arrowBannerRight ${arrowVisible ? "" : "hide"}`}
-            alt="logo"
+            alt="fleche suivant"
           />
         </div>
         <div className={`numberBanner ${arrowVisible ? "" : "hide"}`}>
@@ -212,7 +216,7 @@ function Info() {
                 <div className="logementNom"> {host[1]}</div>
               </div>
               <div>
-                <img src={User} className="userImg" alt="logo" />
+                <img src={User} className="userImg" alt="photo propriétaire" />
               </div>
             </div>
             <Ratings />
@@ -226,7 +230,7 @@ function Info() {
                 <img
                   src={Arrow}
                   className={`toggleMenu ${infoVisible.desc ? "rotate" : ""}`}
-                  alt="logo"
+                  alt="fleche"
                 />
               </div>
               <div
@@ -245,7 +249,7 @@ function Info() {
                 <img
                   src={Arrow}
                   className={`toggleMenu ${infoVisible.stuff ? "rotate" : ""}`}
-                  alt="logo"
+                  alt="fleche"
                 />
               </div>
               <ul

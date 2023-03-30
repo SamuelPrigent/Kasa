@@ -30,7 +30,7 @@ function ToggleElement() {
           <img
             src={Arrow}
             className={`toggleMenu ${infoVisible.fiabilite ? "rotate" : ""}`}
-            alt="logo"
+            alt="fleche"
           />
         </div>
         <div className={`textToggle ${infoVisible.fiabilite ? "visible" : ""}`}>
@@ -46,7 +46,7 @@ function ToggleElement() {
           <img
             src={Arrow}
             className={`toggleMenu ${infoVisible.respect ? "rotate" : ""}`}
-            alt="logo"
+            alt="fleche"
           />
         </div>
         <div className={`textToggle ${infoVisible.respect ? "visible" : ""}`}>
@@ -62,7 +62,7 @@ function ToggleElement() {
           <img
             src={Arrow}
             className={`toggleMenu ${infoVisible.service ? "rotate" : ""}`}
-            alt="logo"
+            alt="fleche"
           />
         </div>
         <div className={`textToggle ${infoVisible.service ? "visible" : ""}`}>
@@ -77,7 +77,7 @@ function ToggleElement() {
           <img
             src={Arrow}
             className={`toggleMenu ${infoVisible.securite ? "rotate" : ""}`}
-            alt="logo"
+            alt="fleche"
           />
         </div>
         <div className={`textToggle ${infoVisible.securite ? "visible" : ""}`}>
