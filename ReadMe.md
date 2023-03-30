@@ -1,6 +1,6 @@
-## Front-End Projet
+## Front-End React Projet
 
 ### Install & Start Project
 
-- Npm install
-- Npm run dev
+- `npm install`
+- `npm run dev`
