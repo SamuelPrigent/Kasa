@@ -12,7 +12,6 @@ import { useParams } from "react-router-dom"; // recup params
 import logement from "../data/logements.json"; // Fetch real data
 import { useState } from "react";
 import { useEffect } from "react";
-import { useRef } from "react";
 
 // Tag element
 function TagElement({ tag }) {

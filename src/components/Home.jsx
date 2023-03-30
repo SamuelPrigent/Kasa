@@ -7,13 +7,15 @@ import { Link } from "react-router-dom"; // router link
 
 // Card
 function LogementCard({ logement }) {
+  let cover = logement.pictures[0];
+
+  if (logement.cover) {
+    cover = logement.cover;
+  }
+
   return (
     <Link className="kasaCardContainer" to={`logement/${logement.id}`}>
-      <img
-        src={logement.pictures[0]}
-        className="kasaCard"
-        alt="photo logement"
-      />
+      <img src={cover} className="kasaCard" alt="photo logement" />
       <div className="kasaCardBackground"></div>
       <div className="kasaCardText">{logement.title}</div>
     </Link>
