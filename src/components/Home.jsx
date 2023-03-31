@@ -2,13 +2,9 @@ import "../style/home.css";
 import logement from "../data/logements.json";
 import { Link } from "react-router-dom"; // router link
 
-//
-// console.log(logement);
-
 // Card
 function LogementCard({ logement }) {
   let cover = logement.pictures[0];
-
   if (logement.cover) {
     cover = logement.cover;
   }

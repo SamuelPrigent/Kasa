@@ -265,6 +265,7 @@
   padding: 25px 19px 19px 19px;
   bottom: 5px;
   z-index: 0;
+  list-style: none;
 }
 
 .textToggle2 {

@@ -3,15 +3,16 @@ import User from "../assets/UserImg.png";
 import RatingRed from "../assets/RatingRed.svg";
 import RatingGrey from "../assets/RatingGrey.svg";
 import Arrow from "../assets/Arrow.svg";
-
 // css
 import "../style/logement.css";
 import "../style/reset.css";
-//
+// react
 import { useParams } from "react-router-dom"; // recup params
 import logement from "../data/logements.json"; // Fetch real data
 import { useState } from "react";
 import { useEffect } from "react";
+// component
+import Colapse from "./Colapse.jsx";
 
 // Tag element
 function TagElement({ tag }) {
@@ -40,7 +41,7 @@ function Ratings() {
   const kasa = logement.find((element) => element.id === id);
   const rating = kasa.rating;
 
-  if (rating == 1) {
+  if (rating === "1") {
     return (
       <div className="logementRatings">
         <img src={RatingRed} className="logementRating" alt="red star" />
@@ -51,7 +52,7 @@ function Ratings() {
       </div>
     );
   }
-  if (rating == 2) {
+  if (rating === "2") {
     return (
       <div className="logementRatings">
         <img src={RatingRed} className="logementRating" alt="red star" />
@@ -62,7 +63,7 @@ function Ratings() {
       </div>
     );
   }
-  if (rating == 3) {
+  if (rating === "3") {
     return (
       <div className="logementRatings">
         <img src={RatingRed} className="logementRating" alt="red star" />
@@ -73,7 +74,7 @@ function Ratings() {
       </div>
     );
   }
-  if (rating == 4) {
+  if (rating === "4") {
     return (
       <div className="logementRatings">
         <img src={RatingRed} className="logementRating" alt="red star" />
@@ -84,7 +85,7 @@ function Ratings() {
       </div>
     );
   }
-  if (rating == 5) {
+  if (rating === "5") {
     return (
       <div className="logementRatings">
         <img src={RatingRed} className="logementRating" alt="red star" />
@@ -183,18 +184,7 @@ function Info() {
   const equipements = kasa.equipments;
   const stuffElements = createEquiment(equipements);
   const picsArray = kasa.pictures;
-
-  // Toggle Visibility
-  const [infoVisible, setInfoVisible] = useState({
-    desc: true,
-    stuff: true,
-  });
-  const handleToggle = (id) => {
-    setInfoVisible((prevState) => ({
-      ...prevState,
-      [id]: !prevState[id],
-    }));
-  };
+  const rating = kasa.rating;
 
   return (
     <div>
@@ -223,40 +213,14 @@ function Info() {
         </div>
         <div className="logementBloc">
           <div className="logementBlocDisplay">
-            <div className="infoContainerLogement">
-              <div className="barToggle" onClick={() => handleToggle("desc")}>
-                <div>Description</div>
-                <img
-                  src={Arrow}
-                  className={`toggleMenu ${infoVisible.desc ? "rotate" : ""}`}
-                  alt="fleche"
-                />
-              </div>
-              <div
-                className={`textToggleLogement ${
-                  infoVisible.desc ? "visible" : ""
-                }`}
-              >
-                {kasa.description}
-              </div>
-            </div>
+            <Colapse
+              title={"Description"}
+              desc={kasa.description}
+              state={true}
+            />
           </div>
           <div className="logementBlocDisplay">
-            <div className="infoContainerLogement">
-              <div className="barToggle" onClick={() => handleToggle("stuff")}>
-                <div>Équipements</div>
-                <img
-                  src={Arrow}
-                  className={`toggleMenu ${infoVisible.stuff ? "rotate" : ""}`}
-                  alt="fleche"
-                />
-              </div>
-              <ul
-                className={`textToggle2 ${infoVisible.stuff ? "visible" : ""}`}
-              >
-                {stuffElements}
-              </ul>
-            </div>
+            <Colapse title={"Équipements"} desc={stuffElements} state={true} />
           </div>
         </div>
       </div>
