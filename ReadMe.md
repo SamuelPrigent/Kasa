@@ -1,7 +1,4 @@
-## Front-End React Projet
+## Start project
 
-### Install & start project
-
-- In main folder "Kasa"
 - `npm install`
 - `npm run dev`
