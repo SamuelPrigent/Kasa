@@ -1,14 +1,14 @@
 // assets
-import User from "../assets/UserImg.png";
 import RatingRed from "../assets/RatingRed.svg";
 import RatingGrey from "../assets/RatingGrey.svg";
 import Arrow from "../assets/Arrow.svg";
+// data
+import logement from "../data/logements.json"; // Fetch real data
 // css
 import "../style/logement.css";
 import "../style/reset.css";
 // react
 import { useParams } from "react-router-dom"; // recup params
-import logement from "../data/logements.json"; // Fetch real data
 import { useState } from "react";
 import { useEffect } from "react";
 // component
@@ -205,7 +205,11 @@ function Info() {
                 <div className="logementNom"> {host[1]}</div>
               </div>
               <div>
-                <img src={User} className="userImg" alt="photo propriétaire" />
+                <img
+                  src={kasa.host.picture}
+                  className="userImg"
+                  alt="photo propriétaire"
+                />
               </div>
             </div>
             <Ratings />

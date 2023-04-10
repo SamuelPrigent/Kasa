@@ -3,6 +3,8 @@
 }
 
 .home {
+  margin: auto;
+  max-width: 1150px;
   display: grid;
   padding: 45px;
   column-gap: 40px;

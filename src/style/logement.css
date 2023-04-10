@@ -3,6 +3,8 @@
   flex-direction: column;
   gap: 10px;
   padding: 0px 75px 0px;
+  margin: auto;
+  max-width: 1150px;
 }
 
 /* Banner  */
@@ -106,6 +108,8 @@
   flex-direction: column;
   border: 0px solid blue;
   margin-bottom: 20px;
+  margin: auto;
+  max-width: 1150px;
 }
 
 .logementInfoHeader {
@@ -192,6 +196,7 @@
 
 .userImg {
   height: 60px;
+  border-radius: 50%;
 }
 
 .logementTags {

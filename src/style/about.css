@@ -3,6 +3,8 @@
   flex-direction: column;
   gap: 10px;
   padding: 0px 75px 0px;
+  max-width: 1350px;
+  margin: auto;
 }
 
 .bannerContainerInfo {
@@ -42,6 +44,8 @@
   padding: 0px 130px 0px;
   margin-bottom: 20px;
   min-height: 60vh;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .infoContainer {

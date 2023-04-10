@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"; // router link
 
 // Card
 function LogementCard({ logement }) {
+  // cover
   let cover = logement.pictures[0];
   if (logement.cover) {
     cover = logement.cover;
