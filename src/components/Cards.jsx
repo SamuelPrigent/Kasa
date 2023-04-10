@@ -27,7 +27,7 @@ function createLogementCards(logements) {
 }
 
 // Affichage Global du container
-function HomeCards() {
+function Cards() {
   const logementCards = createLogementCards(logement);
   return (
     <div className="homeContainer">
@@ -36,4 +36,4 @@ function HomeCards() {
   );
 }
 
-export default HomeCards;
+export default Cards;
