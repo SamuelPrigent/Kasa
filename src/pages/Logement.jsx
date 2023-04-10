@@ -14,7 +14,7 @@ import { useEffect } from "react";
 // TEST
 import { useNavigate } from "react-router-dom";
 // component
-import Colapse from "./Colapse.jsx";
+import Colapse from "../components/Colapse.jsx";
 
 // Tag element
 function TagElement({ tag }) {

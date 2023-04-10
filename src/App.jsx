@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 
-// pages & components
+// pages
 import HomePage from "./pages/HomePage.jsx";
-import Error from "./components/Error.jsx"; // page error
-import Logement from "./components/Logement.jsx"; // page logement
-import About from "./components/About.jsx"; // page info
+import Error from "./pages/Error.jsx"; // page error
+import Logement from "./pages/Logement.jsx"; // page logement
+import About from "./pages/About.jsx"; // page info
 // style
 import "./style/index.css";
 import "./style/reset.css";

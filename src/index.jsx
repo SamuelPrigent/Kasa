@@ -9,8 +9,8 @@ import "./style/reset.css";
 // Router
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
-
-import ScrollToTop from "./components/ScrollToTop.jsx";
+// utils
+import ScrollToTop from "./utils/ScrollToTop.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
