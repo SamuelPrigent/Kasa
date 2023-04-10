@@ -21,9 +21,11 @@
   border-radius: 22px;
   margin-bottom: 20px;
   z-index: 1;
+  min-height: 240px;
 }
 
 .bannerTextMain {
+  min-height: 240px;
   display: flex;
   aspect-ratio: 1240 / 223;
   justify-content: center;

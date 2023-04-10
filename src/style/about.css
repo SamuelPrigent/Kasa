@@ -16,6 +16,7 @@
 }
 
 .bannerImgInfo {
+  min-height: 240px;
   aspect-ratio: 1240 / 223;
   object-fit: cover;
   border-radius: 22px;
@@ -24,6 +25,7 @@
 }
 
 .bannerTextInfo {
+  min-height: 240px;
   display: flex;
   aspect-ratio: 1240 / 223;
   justify-content: center;
