@@ -1,6 +1,4 @@
 // assets
-import RatingRed from "../assets/RatingRed.svg";
-import RatingGrey from "../assets/RatingGrey.svg";
 import Arrow from "../assets/Arrow.svg";
 // data
 import logement from "../data/logements.json"; // Fetch real data
