@@ -11,10 +11,11 @@ import "../style/reset.css";
 import { useParams } from "react-router-dom"; // recup params
 import { useState } from "react";
 import { useEffect } from "react";
-// TEST
+// for redirection
 import { useNavigate } from "react-router-dom";
 // component
 import Colapse from "../components/Colapse.jsx";
+import Ratings from "../components/Ratings.jsx";
 
 // Tag element
 function TagElement({ tag }) {
@@ -35,70 +36,6 @@ function createEquiment(equipements) {
   return equipements.map((equipement) => (
     <StuffElement key={equipement} equipement={equipement} />
   ));
-}
-
-// Ratings (1 - 5)
-function Ratings() {
-  const { id } = useParams(); // get id
-  const kasa = logement.find((element) => element.id === id);
-  if (kasa) {
-    const rating = kasa.rating;
-    if (rating === "1") {
-      return (
-        <div className="logementRatings">
-          <img src={RatingRed} className="logementRating" alt="red star" />
-          <img src={RatingGrey} className="logementRating" alt="grey star" />
-          <img src={RatingGrey} className="logementRating" alt="grey star" />
-          <img src={RatingGrey} className="logementRating" alt="grey star" />
-          <img src={RatingGrey} className="logementRating" alt="grey star" />
-        </div>
-      );
-    }
-    if (rating === "2") {
-      return (
-        <div className="logementRatings">
-          <img src={RatingRed} className="logementRating" alt="red star" />
-          <img src={RatingRed} className="logementRating" alt="red star" />
-          <img src={RatingGrey} className="logementRating" alt="grey star" />
-          <img src={RatingGrey} className="logementRating" alt="grey star" />
-          <img src={RatingGrey} className="logementRating" alt="grey star" />
-        </div>
-      );
-    }
-    if (rating === "3") {
-      return (
-        <div className="logementRatings">
-          <img src={RatingRed} className="logementRating" alt="red star" />
-          <img src={RatingRed} className="logementRating" alt="red star" />
-          <img src={RatingRed} className="logementRating" alt="red star" />
-          <img src={RatingGrey} className="logementRating" alt="grey star" />
-          <img src={RatingGrey} className="logementRating" alt="grey star" />
-        </div>
-      );
-    }
-    if (rating === "4") {
-      return (
-        <div className="logementRatings">
-          <img src={RatingRed} className="logementRating" alt="red star" />
-          <img src={RatingRed} className="logementRating" alt="red star" />
-          <img src={RatingRed} className="logementRating" alt="red star" />
-          <img src={RatingRed} className="logementRating" alt="red star" />
-          <img src={RatingGrey} className="logementRating" alt="grey star" />
-        </div>
-      );
-    }
-    if (rating === "5") {
-      return (
-        <div className="logementRatings">
-          <img src={RatingRed} className="logementRating" alt="red star" />
-          <img src={RatingRed} className="logementRating" alt="red star" />
-          <img src={RatingRed} className="logementRating" alt="red star" />
-          <img src={RatingRed} className="logementRating" alt="red star" />
-          <img src={RatingRed} className="logementRating" alt="red star" />
-        </div>
-      );
-    }
-  }
 }
 
 function ImageSlider({ array }) {
@@ -219,7 +156,7 @@ function Info() {
                   />
                 </div>
               </div>
-              <Ratings />
+              <Ratings rating={kasa.rating} />
             </div>
           </div>
           <div className="logementBloc">
@@ -242,7 +179,7 @@ function Info() {
       </div>
     );
   } else {
-    // si l'id n'est pas reconnu redirigé sur la page d'erreur
+    // redirection page d'erreur si id logement non reconnu
     const navigate = useNavigate();
     useEffect(() => {
       const kasa = logement.find((element) => element.id === id);
