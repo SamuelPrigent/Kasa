@@ -8,10 +8,22 @@ function Ratings({ rating }) {
 
   const ratingStars = ratings.map((starIndex) => {
     if (starIndex <= rating) {
-      return <img src={RatingRed} className="logementRating" alt="red star" />;
+      return (
+        <img
+          src={RatingRed}
+          key={`red-star-${starIndex}`}
+          className="logementRating"
+          alt="red star"
+        />
+      );
     } else {
       return (
-        <img src={RatingGrey} className="logementRating" alt="grey star" />
+        <img
+          src={RatingGrey}
+          key={`grey-star-${starIndex}`}
+          className="logementRating"
+          alt="grey star"
+        />
       );
     }
   });
