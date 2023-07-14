@@ -4,7 +4,7 @@ name: Deploy static content to Pages
 on:
   # Se déclenche lors des pushs sur la branche par défaut
   push:
-    branches: ["main"]
+    branches: ["master"]
 
   # Vous permet d'exécuter ce workflow manuellement depuis l'onglet Actions
   workflow_dispatch:
