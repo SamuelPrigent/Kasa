@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 
 // pages
-import Home from "./pages/Home.jsx";
+import Home from "./pages/Home.jsx"; // home
 import Error from "./pages/Error.jsx"; // page error
 import Logement from "./pages/Logement.jsx"; // page logement
 import About from "./pages/About.jsx"; // page info
@@ -16,7 +16,7 @@ function App() {
       <Route path="/about" element={<About />}></Route>
       <Route path="/logement" element={<Logement />}></Route>
       <Route path="/logement/:id" element={<Logement />}></Route>
-      <Route path="*" element={<Error />} />
+      <Route path="/error" element={<Error />} />
     </Routes>
   );
 }
