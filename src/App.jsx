@@ -12,10 +12,10 @@ import "./style/reset.css";
 function App() {
   return (
     <Routes>
-      <Route path="/Kasa" element={<Home />}></Route>
-      <Route path="/about" element={<About />}></Route>
-      <Route path="/logement" element={<Logement />}></Route>
-      <Route path="/logement/:id" element={<Logement />}></Route>
+      <Route path="/Kasa" element={<Home />} />
+      <Route path="/Kasa/about" element={<About />} />
+      <Route path="/Kasa/logement" element={<Logement />} />
+      <Route path="/Kasa/logement/:id" element={<Logement />} />
       <Route path="*" element={<Error />} />
     </Routes>
   );
