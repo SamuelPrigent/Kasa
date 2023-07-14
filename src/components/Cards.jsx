@@ -11,7 +11,7 @@ function LogementCard({ logement }) {
   }
 
   return (
-    <Link className="kasaCardContainer" to={`logement/${logement.id}`}>
+    <Link className="kasaCardContainer" to={`Kasa/logement/${logement.id}`}>
       <img src={cover} className="kasaCard" alt="photo logement" />
       <div className="kasaCardBackground"></div>
       <div className="kasaCardText">{logement.title}</div>

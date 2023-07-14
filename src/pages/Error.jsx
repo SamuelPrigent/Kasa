@@ -10,7 +10,7 @@ function Error() {
       <div className="errorTextMedium">
         Oups! La page que vous demandez n'existe pas.
       </div>
-      <Link className="errorTextSmall" to="/">
+      <Link className="errorTextSmall" to="/Kasa">
         Retourner sur la page d’accueil
       </Link>
     </div>
